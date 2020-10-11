@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="ABS enclosure medium quality" version="2020-05-30 18:01:35" app="S3D-Software 4.1.2">
+<profile name="ABS enclosure medium quality" version="2020-10-11 14:54:13" app="S3D-Software 4.1.2">
   <baseProfile>ABS medium calibrated</baseProfile>
   <printMaterial></printMaterial>
   <printQuality></printQuality>
@@ -11,8 +11,8 @@
     <width>0.43</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>3.2</retractionDistance>
-    <extraRestartDistance>0</extraRestartDistance>
+    <retractionDistance>3</retractionDistance>
+    <extraRestartDistance>-0.2</extraRestartDistance>
     <retractionZLift>0.25</retractionZLift>
     <retractionSpeed>2400</retractionSpeed>
     <useCoasting>0</useCoasting>
@@ -31,9 +31,9 @@
   <startPointOriginY>0</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>160</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>75</firstLayerWidthPercentage>
-  <firstLayerUnderspeed>0.4</firstLayerUnderspeed>
+  <firstLayerUnderspeed>0.3</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftTopLayers>1</raftTopLayers>
@@ -119,7 +119,7 @@
   <applyToolheadOffsets>0</applyToolheadOffsets>
   <gcodeXoffset>0</gcodeXoffset>
   <gcodeYoffset>0</gcodeYoffset>
-  <gcodeZoffset>0.3</gcodeZoffset>
+  <gcodeZoffset>0.1</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
   <strokeXoverride>200</strokeXoverride>
