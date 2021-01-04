@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="ABS enclosure medium quality" version="2020-10-11 14:54:13" app="S3D-Software 4.1.2">
+<profile name="ABS enclosure medium quality" version="2021-01-03 17:12:17" app="S3D-Software 4.1.2">
   <baseProfile>ABS medium calibrated</baseProfile>
   <printMaterial></printMaterial>
   <printQuality></printQuality>
@@ -11,9 +11,9 @@
     <width>0.43</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>3</retractionDistance>
-    <extraRestartDistance>-0.2</extraRestartDistance>
-    <retractionZLift>0.25</retractionZLift>
+    <retractionDistance>1</retractionDistance>
+    <extraRestartDistance>0</extraRestartDistance>
+    <retractionZLift>0</retractionZLift>
     <retractionSpeed>2400</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
@@ -32,7 +32,7 @@
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>160</firstLayerHeightPercentage>
-  <firstLayerWidthPercentage>75</firstLayerWidthPercentage>
+  <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.3</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>20</infillPercentage>
+  <infillPercentage>15</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -96,7 +96,9 @@
     <temperatureNumber>2</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="93"/>
+    <setpoint layer="1" temperature="96"/>
+    <setpoint layer="2" temperature="93"/>
+    <setpoint layer="4" temperature="100"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -119,7 +121,7 @@
   <applyToolheadOffsets>0</applyToolheadOffsets>
   <gcodeXoffset>0</gcodeXoffset>
   <gcodeYoffset>0</gcodeYoffset>
-  <gcodeZoffset>0.1</gcodeZoffset>
+  <gcodeZoffset>0.15</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
   <strokeXoverride>200</strokeXoverride>
@@ -141,7 +143,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M108 S155 ; turn on M2 fans,G28 ; home all axes,G1 Y50 Z0.3 F9600 ; move forward to avoid binder clips,G1 X205 Z10 ; move off platform,G1 Z0.4 ; position nozzle,G92 E0 ; zero extruder,G1 E25 F225 ; purge nozzle,G92 E0 ; zero extruder,G1 X190 Z0.1 E1.0 F1200 ; slow wipe,G1 X180 Z0.25 ; lift</startingGcode>
+  <startingGcode>M108 S155 ; turn on M2 fans,G28 X Y ; home X and Y,G1 Y50 F9600 ; move forward to avoid binder clips,G1 X205 ; move off platform,G28 Z ; home z (doing this now avoids strings from getting stuck on the nozzle),G1 Z0.4 ; position nozzle,G92 E0 ; zero extruder,G1 E25 F225 ; purge nozzle,G92 E0 ; zero extruder,G1 X190 Z0.1 E1.0 F1200 ; slow wipe,G1 X180 Z0.25 ; lift</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
